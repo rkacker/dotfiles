@@ -6,3 +6,15 @@ defscrollback 32000
 
 # Always start `screen` with UTF-8 enabled (`screen -U`)
 defutf8 on
+
+# Include display/caption
+caption always "%{= Wk}%-w%{= Bw}%n %t%{-}%+w %-="
+
+# change key binding to not conflict with emacs
+escape ^tt
+
+# TODO: On startup create the following sessions
+# screen -t "server" 1
+# screen -t "logs" 2
+# screen -t "ruby" 3
+# screen -t "coffeescript" 4
