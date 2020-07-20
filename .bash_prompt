@@ -78,10 +78,11 @@ bash_prompt_command() {
     P_PWD=${TRUNC_SYMBOL}/${P_PWD#*/}
   fi
 
-  # Update terminal title
-  if [[ $TERM == xterm* ]]; then
-    echo -ne "\033]0;${P_PWD}\007"
-  fi
+  # # Update terminal title
+  # # Often in a screen, so don't name the title
+  # if [[ $TERM == xterm* ]]; then
+  #  echo -ne "\033]0;${P_PWD}\007"
+  # fi
 
   # Parse Git branch name
   P_GIT=$(parse_git_branch)
