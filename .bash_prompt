@@ -51,7 +51,7 @@ _bash_prompt_config() {
 
   # Expose the variables we need in prompt command
   P_USER=${BRIGHT_GREEN}${USER_SYMBOL}
-  P_HOST=${CYAN}${HOST_SYMBOL}
+  P_HOST=${HOST_SYMBOL}
   P_WHITE=${WHITE}
   P_GREEN=${BRIGHT_GREEN}
   P_YELLOW=${YELLOW}
@@ -92,7 +92,7 @@ bash_prompt_command() {
     P_EXIT+="${P_RED}✘ "
   fi
 
-  PS1="${P_EXIT}${P_USER}${P_WHITE}@${P_HOST} ${P_YELLOW}${P_PWD}${P_GREEN}${P_GIT}${P_YELLOW} ❯ ${P_RESET}"
+  PS1="${P_USER}@${P_HOST} ${P_YELLOW}${P_PWD}${P_GREEN}${P_GIT}${P_WHITE} ❯ ${P_RESET}"
 }
 
 parse_git_branch() {
