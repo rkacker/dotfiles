@@ -13,6 +13,10 @@ caption always "%{= Wk}%-w%{= Bw}%n %t%{-}%+w %-="
 # change key binding to not conflict with emacs
 escape ^tt
 
+# Mouse scroll back in the buffer in a screen
+# https://serverfault.com/questions/206303/how-to-scroll-back-in-screen-within-a-ssh-session-from-os-x
+termcapinfo xterm* ti@:te@
+
 # TODO: On startup create the following sessions
 # screen -t "server" 1
 # screen -t "logs" 2
