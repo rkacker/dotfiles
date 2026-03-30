@@ -5,6 +5,7 @@
 [push]
     default = current
     autoSetupRemote = true
+    followTags = true
 
 [pull]
     rebase = false
@@ -13,12 +14,28 @@
     st = status
     lg = log --oneline --graph --decorate --all
     pushf = push --force-with-lease
+    go = "!f() { git checkout -b \"$1\" 2> /dev/null || git checkout \"$1\"; }; f"
+    fc = "!f() { git log --pretty=format:'%C(yellow)%h  %Cblue%ad  %Creset%s%Cgreen  [%cn] %Cred%d' --decorate --date=short -S$1; }; f"
+    fm = "!f() { git log --pretty=format:'%C(yellow)%h  %Cblue%ad  %Creset%s%Cgreen  [%cn] %Cred%d' --decorate --date=short --grep=$1; }; f"
+    dm = "!git branch --merged | grep -v '\\*' | xargs -n 1 git branch -d"
 
 [core]
     excludesFile = ~/.config/git/ignore
+    trustctime = false
+    untrackedCache = true
 
 [init]
     defaultBranch = master
 
 [diff]
     colorMoved = zebra
+    renames = copies
+
+[help]
+    autocorrect = 1
+
+[url "git@github.com:"]
+    insteadOf = "gh:"
+
+[merge]
+    log = true

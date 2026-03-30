@@ -2,6 +2,7 @@
 export EDITOR="code --wait"
 export BREW_PREFIX="$(brew --prefix)"
 export UV_PYTHON_PREFERENCE="managed"
+export PYTHONIOENCODING="UTF-8"
 
 # ── History ──────────────────────────────────────────────────────────
 HISTFILE="$HOME/.zsh_history"

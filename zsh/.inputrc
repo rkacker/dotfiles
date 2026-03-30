@@ -1,0 +1,32 @@
+# Case-insensitive tab completion
+set completion-ignore-case on
+
+# Show all matches immediately (no double-tab)
+set show-all-if-ambiguous on
+
+# Trailing slash on symlinked directories
+set mark-symlinked-directories on
+
+# Up/Down searches history using typed prefix
+"\e[B": history-search-forward
+"\e[A": history-search-backward
+
+# Don't autocomplete hidden files unless pattern starts with .
+set match-hidden-files off
+
+# Show all results at once
+set page-completions off
+
+# Ask before showing >200 completions
+set completion-query-items 200
+
+# Show file type indicator like ls -F
+set visible-stats on
+
+# Smarter completion around cursor
+set skip-completed-text on
+
+# UTF-8
+set input-meta on
+set output-meta on
+set convert-meta off
