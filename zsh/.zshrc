@@ -1,3 +1,6 @@
+# ── Default directory ────────────────────────────────────────────────
+cd ~/code
+
 # ── History ──────────────────────────────────────────────────────────
 HISTFILE="$HOME/.zsh_history"
 HISTSIZE=10000
@@ -11,8 +14,8 @@ alias cp='cp -i'             # prompt before overwrite
 alias mv='mv -i'             # prompt before overwrite
 
 # ── Modern CLI ───────────────────────────────────────────────────────
-alias ls='eza --icons'
-alias ll='eza -la --icons --git'
+alias ls='eza --color=never'
+alias ll='eza -la --color=never --git'
 alias cat='bat --paging=never'
 alias find='fd'
 
@@ -32,6 +35,9 @@ alias pip='uv pip'
 export SANDBOX="$HOME/sandbox"
 mkdir -p "$SANDBOX"
 
+# ── Utilities ────────────────────────────────────────────────────────
+alias rebash='source ~/.zshrc'
+
 # ── Plugins (via Homebrew) ───────────────────────────────────────────
 source "$(brew --prefix)/share/zsh-autosuggestions/zsh-autosuggestions.zsh"
 source "$(brew --prefix)/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh"
@@ -42,6 +48,9 @@ source "$(brew --prefix)/opt/fzf/shell/completion.zsh"
 
 # ── zoxide (smarter cd) ──────────────────────────────────────────────
 eval "$(zoxide init zsh)"
+
+# ── Completions ──────────────────────────────────────────────────────
+autoload -Uz compinit && compinit
 
 # ── uv completions ───────────────────────────────────────────────────
 eval "$(uv generate-shell-completion zsh)"

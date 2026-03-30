@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 set -euo pipefail
 
-DOTFILES="$HOME/dotfiles"
+DOTFILES="$HOME/code/dotfiles"
 cd "$DOTFILES"
 
 echo "Installing Homebrew packages..."

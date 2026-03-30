@@ -13,6 +13,10 @@ brew "fd"           # faster find
 
 # Fonts
 cask "font-monaspace"
+cask "font-monaspice-nerd-font"
+
+# GitHub CLI
+brew "gh"
 
 # Already installed (pinned for reproducibility):
 # brew "uv"

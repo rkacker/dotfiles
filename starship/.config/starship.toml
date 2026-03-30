@@ -1,14 +1,12 @@
 # Monaspace-compatible, informative but clean
-format = """
-$directory$git_branch$git_status$python$cmd_duration
-$character"""
+format = "$directory$git_branch$git_status$cmd_duration$character"
 
 [directory]
 truncation_length = 3
 truncate_to_repo = true
 
 [git_branch]
-symbol = " "
+symbol = "\ue0a0 "
 style = "bold purple"
 
 [git_status]
@@ -19,8 +17,7 @@ modified = "!${count}"
 untracked = "?${count}"
 
 [python]
-symbol = " "
-detect_files = ["pyproject.toml", "requirements.txt", ".python-version", "uv.lock"]
+disabled = true
 
 [cmd_duration]
 min_time = 2_000
