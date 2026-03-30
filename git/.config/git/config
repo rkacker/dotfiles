@@ -1,0 +1,24 @@
+[user]
+    name = Rishi Kacker
+    email = kacker@gmail.com
+
+[push]
+    default = current
+    autoSetupRemote = true
+
+[pull]
+    rebase = false
+
+[alias]
+    st = status
+    lg = log --oneline --graph --decorate --all
+    pushf = push --force-with-lease
+
+[core]
+    excludesFile = ~/.config/git/ignore
+
+[init]
+    defaultBranch = master
+
+[diff]
+    colorMoved = zebra

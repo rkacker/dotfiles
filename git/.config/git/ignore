@@ -1,0 +1,21 @@
+# Claude Code
+**/.claude/settings.local.json
+
+# macOS
+.DS_Store
+.AppleDouble
+
+# Secrets / env
+.env
+.env.*
+*.local
+*.secret
+
+# Python
+__pycache__/
+*.pyc
+.venv/
+.direnv/
+
+# Node
+node_modules/
