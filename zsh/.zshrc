@@ -1,5 +1,7 @@
-# ── Default directory ────────────────────────────────────────────────
-cd ~/code
+# ── Environment ─────────────────────────────────────────────────────
+export EDITOR="code --wait"
+export BREW_PREFIX="$(brew --prefix)"
+export UV_PYTHON_PREFERENCE="managed"
 
 # ── History ──────────────────────────────────────────────────────────
 HISTFILE="$HOME/.zsh_history"
@@ -17,34 +19,25 @@ alias mv='mv -i'             # prompt before overwrite
 alias ls='eza --color=never'
 alias ll='eza -la --color=never --git'
 alias cat='bat --paging=never'
-alias find='fd'
-
-# ── Git safeguards ───────────────────────────────────────────────────
-alias gst='git status'
-alias glog='git log --oneline --graph --decorate --all'
-alias gpushf='git push --force-with-lease'   # safe force push
+alias ffd='fd'
 
 # ── Python (uv) ──────────────────────────────────────────────────────
 alias python='python3'
 alias pip='uv pip'
-# Use: `uv python install 3.13` to manage versions
-# Use: `uv venv` to create virtual envs
-# Use: `uv tool install <pkg>` for global CLI tools
 
 # ── Sandbox ──────────────────────────────────────────────────────────
 export SANDBOX="$HOME/sandbox"
-mkdir -p "$SANDBOX"
+[[ -o interactive ]] && mkdir -p "$SANDBOX"
 
 # ── Utilities ────────────────────────────────────────────────────────
 alias rebash='source ~/.zshrc'
 
 # ── Plugins (via Homebrew) ───────────────────────────────────────────
-source "$(brew --prefix)/share/zsh-autosuggestions/zsh-autosuggestions.zsh"
-source "$(brew --prefix)/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh"
+source "$BREW_PREFIX/share/zsh-autosuggestions/zsh-autosuggestions.zsh"
 
 # ── fzf ──────────────────────────────────────────────────────────────
-source "$(brew --prefix)/opt/fzf/shell/key-bindings.zsh"
-source "$(brew --prefix)/opt/fzf/shell/completion.zsh"
+source "$BREW_PREFIX/opt/fzf/shell/key-bindings.zsh"
+source "$BREW_PREFIX/opt/fzf/shell/completion.zsh"
 
 # ── zoxide (smarter cd) ──────────────────────────────────────────────
 eval "$(zoxide init zsh)"
@@ -54,6 +47,9 @@ autoload -Uz compinit && compinit
 
 # ── uv completions ───────────────────────────────────────────────────
 eval "$(uv generate-shell-completion zsh)"
+
+# ── Syntax highlighting (must be after all plugins/widgets) ──────────
+source "$BREW_PREFIX/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh"
 
 # ── Starship prompt ──────────────────────────────────────────────────
 eval "$(starship init zsh)"

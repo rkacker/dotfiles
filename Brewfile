@@ -8,7 +8,7 @@ brew "fzf"
 
 # Modern CLI replacements
 brew "bat"          # cat with syntax highlighting
-brew "eza"          # modern ls with icons
+brew "eza"          # modern ls
 brew "fd"           # faster find
 
 # Fonts
@@ -18,7 +18,9 @@ cask "font-monaspice-nerd-font"
 # GitHub CLI
 brew "gh"
 
-# Already installed (pinned for reproducibility):
-# brew "uv"
-# brew "git"
+# Python
+brew "uv"
+
+# Core
+brew "git"
 # cask "iterm2"
