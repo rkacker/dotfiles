@@ -8,7 +8,7 @@ echo "Installing Homebrew packages..."
 brew bundle --file="$DOTFILES/Brewfile"
 
 echo "Stowing dotfiles..."
-for pkg in zsh git starship; do
+for pkg in zsh git starship npm claude; do
   stow --restow --target="$HOME" "$pkg"
 done
 
