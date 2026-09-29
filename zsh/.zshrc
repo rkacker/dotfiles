@@ -1,6 +1,7 @@
 # ── Environment ─────────────────────────────────────────────────────
 export EDITOR="code --wait"
-export BREW_PREFIX="$(brew --prefix)"
+# HOMEBREW_PREFIX is exported by `brew shellenv` in .zprofile; fall back for non-login shells.
+export BREW_PREFIX="${HOMEBREW_PREFIX:-$(brew --prefix 2>/dev/null || echo /opt/homebrew)}"
 export UV_PYTHON_PREFERENCE="managed"
 export PYTHONIOENCODING="UTF-8"
 
@@ -34,23 +35,37 @@ export SANDBOX="$HOME/sandbox"
 alias rebash='source ~/.zshrc'
 
 # ── Plugins (via Homebrew) ───────────────────────────────────────────
-source "$BREW_PREFIX/share/zsh-autosuggestions/zsh-autosuggestions.zsh"
+# Guarded so a fresh machine (before `brew bundle`) gets a working shell, not errors.
+[[ -r "$BREW_PREFIX/share/zsh-autosuggestions/zsh-autosuggestions.zsh" ]] &&
+  source "$BREW_PREFIX/share/zsh-autosuggestions/zsh-autosuggestions.zsh"
 
 # ── fzf ──────────────────────────────────────────────────────────────
-source "$BREW_PREFIX/opt/fzf/shell/key-bindings.zsh"
-source "$BREW_PREFIX/opt/fzf/shell/completion.zsh"
+[[ -r "$BREW_PREFIX/opt/fzf/shell/key-bindings.zsh" ]] && source "$BREW_PREFIX/opt/fzf/shell/key-bindings.zsh"
+[[ -r "$BREW_PREFIX/opt/fzf/shell/completion.zsh" ]] && source "$BREW_PREFIX/opt/fzf/shell/completion.zsh"
 
 # ── zoxide (smarter cd) ──────────────────────────────────────────────
-eval "$(zoxide init zsh)"
+(( $+commands[zoxide] )) && eval "$(zoxide init zsh)"
 
 # ── Completions ──────────────────────────────────────────────────────
-autoload -Uz compinit && compinit
+# Rebuild the completion dump at most once a day; otherwise trust the cache (-C).
+autoload -Uz compinit
+if [[ -n "$HOME"/.zcompdump(#qN.mh+24) ]]; then
+  compinit
+else
+  compinit -C
+fi
 
 # ── uv completions ───────────────────────────────────────────────────
-eval "$(uv generate-shell-completion zsh)"
+(( $+commands[uv] )) && eval "$(uv generate-shell-completion zsh)"
 
 # ── Syntax highlighting (must be after all plugins/widgets) ──────────
-source "$BREW_PREFIX/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh"
+[[ -r "$BREW_PREFIX/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh" ]] &&
+  source "$BREW_PREFIX/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh"
 
 # ── Starship prompt ──────────────────────────────────────────────────
-eval "$(starship init zsh)"
+(( $+commands[starship] )) && eval "$(starship init zsh)"
+
+# ── Machine-local overrides (gitignored; work env vars, private aliases) ─
+if [[ -r "$HOME/.zshrc.local" ]]; then
+  source "$HOME/.zshrc.local"
+fi

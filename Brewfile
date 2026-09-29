@@ -18,6 +18,9 @@ cask "font-monaspice-nerd-font"
 # GitHub CLI
 brew "gh"
 
+# Security
+brew "gitleaks"     # secrets scanner, used by .githooks/pre-commit
+
 # Python
 brew "uv"
 

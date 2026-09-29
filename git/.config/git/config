@@ -1,7 +1,3 @@
-[user]
-    name = Rishi Kacker
-    email = kacker@gmail.com
-
 [push]
     default = current
     autoSetupRemote = true
@@ -39,3 +35,8 @@
 
 [merge]
     log = true
+
+# Identity and other per-machine settings live in ~/.config/git/config.local,
+# which install.sh creates. It is gitignored via *.local; git skips it if absent.
+[include]
+    path = ~/.config/git/config.local

@@ -1,0 +1,10 @@
+#!/usr/bin/env bash
+# Block commits that contain secrets. Wired up by install.sh via core.hooksPath.
+set -euo pipefail
+
+if ! command -v gitleaks >/dev/null 2>&1; then
+  echo "pre-commit: gitleaks not installed (brew install gitleaks). Refusing to commit unchecked." >&2
+  exit 1
+fi
+
+gitleaks git --pre-commit --staged --no-banner --redact

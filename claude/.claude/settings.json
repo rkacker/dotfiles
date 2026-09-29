@@ -1,19 +1,18 @@
 {
-  "model": "opus",
   "permissions": {
     "deny": [
       "Bash(npm install*)",
       "Bash(npm i *)",
       "Bash(npm add*)",
-      "Bash(npx *)",
       "Bash(pnpm install*)",
       "Bash(pnpm add*)",
-      "Bash(pnpm dlx*)",
       "Bash(yarn add*)",
-      "Bash(yarn dlx*)",
       "Bash(bun install*)",
-      "Bash(bun add*)",
-      "Bash(bun x *)"
+      "Bash(bun add*)"
     ]
-  }
+  },
+  "model": "fable[1m]",
+  "outputStyle": "Crisp",
+  "tui": "fullscreen",
+  "skipAutoPermissionPrompt": true
 }
