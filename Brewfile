@@ -26,4 +26,10 @@ brew "uv"
 
 # Core
 brew "git"
+brew "jq"           # used by install.sh to register MCP servers
+brew "node"         # for `npx skills` (agent skills package manager)
 # cask "iterm2"
+
+# AI tooling. Claude Code itself is installed by install.sh (native installer, self-updating).
+cask "cursor"
+cask "claude"       # desktop app

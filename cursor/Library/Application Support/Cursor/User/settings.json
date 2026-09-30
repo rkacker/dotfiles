@@ -1,0 +1,12 @@
+{
+    "window.commandCenter": 1,
+    "editor.accessibilitySupport": "off",
+    "explorer.confirmDragAndDrop": false,
+    "explorer.confirmDelete": false,
+    "editor.fontSize": 16,
+    "terminal.integrated.fontSize": 16,
+    "chat.editor.fontSize": 16,
+    "terminal.integrated.enableMultiLinePasteWarning": false,
+    "security.promptForLocalFileProtocolHandling": false,
+    "window.autoDetectColorScheme": false
+}

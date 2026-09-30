@@ -3,3 +3,7 @@ eval "$(/opt/homebrew/bin/brew shellenv)"
 
 # uv-managed Python tools
 export PATH="$HOME/.local/bin:$PATH"
+
+# Cursor CLI (`cursor`, `code`)
+[[ -d "/Applications/Cursor.app/Contents/Resources/app/bin" ]] &&
+  export PATH="/Applications/Cursor.app/Contents/Resources/app/bin:$PATH"

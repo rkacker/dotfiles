@@ -1,0 +1,299 @@
+{
+  "version": 3,
+  "skills": {
+    "firecrawl": {
+      "source": "firecrawl/skills",
+      "sourceType": "github",
+      "sourceUrl": "https://github.com/firecrawl/skills.git",
+      "skillPath": "core/firecrawl/SKILL.md",
+      "skillFolderHash": "842484f7e528ef9ebfa59ae78a18362dc3295aba",
+      "installedAt": "2026-08-23T04:26:56.817Z",
+      "updatedAt": "2026-08-23T04:26:56.817Z"
+    },
+    "firecrawl-agent": {
+      "source": "firecrawl/skills",
+      "sourceType": "github",
+      "sourceUrl": "https://github.com/firecrawl/skills.git",
+      "skillPath": "core/firecrawl-agent/SKILL.md",
+      "skillFolderHash": "f37cfb2af5db2cc40ad340e296addf34f219a409",
+      "installedAt": "2026-08-23T04:26:56.817Z",
+      "updatedAt": "2026-08-23T04:26:56.817Z"
+    },
+    "firecrawl-crawl": {
+      "source": "firecrawl/skills",
+      "sourceType": "github",
+      "sourceUrl": "https://github.com/firecrawl/skills.git",
+      "skillPath": "core/firecrawl-crawl/SKILL.md",
+      "skillFolderHash": "346e312a2a612cbda79594ec8f852eb51b42a709",
+      "installedAt": "2026-08-23T04:26:56.817Z",
+      "updatedAt": "2026-08-23T04:26:56.817Z"
+    },
+    "firecrawl-developer-index": {
+      "source": "firecrawl/skills",
+      "sourceType": "github",
+      "sourceUrl": "https://github.com/firecrawl/skills.git",
+      "skillPath": "core/firecrawl-developer-index/SKILL.md",
+      "skillFolderHash": "c7f41e2bffbaa579791d31cd9913a77b9a2e4564",
+      "installedAt": "2026-08-23T04:26:56.817Z",
+      "updatedAt": "2026-08-23T04:26:56.817Z"
+    },
+    "firecrawl-download": {
+      "source": "firecrawl/skills",
+      "sourceType": "github",
+      "sourceUrl": "https://github.com/firecrawl/skills.git",
+      "skillPath": "core/firecrawl-download/SKILL.md",
+      "skillFolderHash": "5129e863bbd801bb48aa2cf5a697be68fd6889a1",
+      "installedAt": "2026-08-23T04:26:56.817Z",
+      "updatedAt": "2026-08-23T04:26:56.817Z"
+    },
+    "firecrawl-interact": {
+      "source": "firecrawl/skills",
+      "sourceType": "github",
+      "sourceUrl": "https://github.com/firecrawl/skills.git",
+      "skillPath": "core/firecrawl-interact/SKILL.md",
+      "skillFolderHash": "8c3efeeff57b32020515d2efd2d11ab74447e01a",
+      "installedAt": "2026-08-23T04:26:56.817Z",
+      "updatedAt": "2026-08-23T04:26:56.817Z"
+    },
+    "firecrawl-map": {
+      "source": "firecrawl/skills",
+      "sourceType": "github",
+      "sourceUrl": "https://github.com/firecrawl/skills.git",
+      "skillPath": "skills/core/firecrawl-map/SKILL.md",
+      "skillFolderHash": "89f934004d9416d22c82176c6411a78a2c26c645",
+      "pluginName": "firecrawl",
+      "installedAt": "2026-08-23T04:26:56.817Z",
+      "updatedAt": "2026-09-30T17:05:47.320Z"
+    },
+    "firecrawl-monitor": {
+      "source": "firecrawl/skills",
+      "sourceType": "github",
+      "sourceUrl": "https://github.com/firecrawl/skills.git",
+      "skillPath": "core/firecrawl-monitor/SKILL.md",
+      "skillFolderHash": "ec5ed7d1a204ac5cc771be69ed12505c3e7e1449",
+      "installedAt": "2026-08-23T04:26:56.817Z",
+      "updatedAt": "2026-08-23T04:26:56.817Z"
+    },
+    "firecrawl-parse": {
+      "source": "firecrawl/skills",
+      "sourceType": "github",
+      "sourceUrl": "https://github.com/firecrawl/skills.git",
+      "skillPath": "core/firecrawl-parse/SKILL.md",
+      "skillFolderHash": "44e73dc1e70a79a3844d91228f4f76316b192102",
+      "installedAt": "2026-08-23T04:26:56.817Z",
+      "updatedAt": "2026-08-23T04:26:56.817Z"
+    },
+    "firecrawl-research-index": {
+      "source": "firecrawl/skills",
+      "sourceType": "github",
+      "sourceUrl": "https://github.com/firecrawl/skills.git",
+      "skillPath": "core/firecrawl-research-index/SKILL.md",
+      "skillFolderHash": "9b5b4b459b8901a55e045434454430ab3bb0b55c",
+      "installedAt": "2026-08-23T04:26:56.817Z",
+      "updatedAt": "2026-08-23T04:26:56.817Z"
+    },
+    "firecrawl-scrape": {
+      "source": "firecrawl/skills",
+      "sourceType": "github",
+      "sourceUrl": "https://github.com/firecrawl/skills.git",
+      "skillPath": "skills/core/firecrawl-scrape/SKILL.md",
+      "skillFolderHash": "40e574a6b626c89c66dccd4f4db6ed5648080083",
+      "pluginName": "firecrawl",
+      "installedAt": "2026-08-23T04:26:56.817Z",
+      "updatedAt": "2026-09-30T17:05:47.321Z"
+    },
+    "firecrawl-search": {
+      "source": "firecrawl/skills",
+      "sourceType": "github",
+      "sourceUrl": "https://github.com/firecrawl/skills.git",
+      "skillPath": "core/firecrawl-search/SKILL.md",
+      "skillFolderHash": "9812f385fbb15457e34d30eab3c3240e68c74c07",
+      "installedAt": "2026-08-23T04:26:56.817Z",
+      "updatedAt": "2026-08-23T04:26:56.817Z"
+    },
+    "firecrawl-company-directories": {
+      "source": "firecrawl/skills",
+      "sourceType": "github",
+      "sourceUrl": "https://github.com/firecrawl/skills.git",
+      "skillPath": "workflows/firecrawl-company-directories/SKILL.md",
+      "skillFolderHash": "01dcc1fbd0741400e52f496e5190eba22104a96f",
+      "installedAt": "2026-08-23T04:26:57.866Z",
+      "updatedAt": "2026-08-23T04:26:57.866Z"
+    },
+    "firecrawl-competitive-intel": {
+      "source": "firecrawl/skills",
+      "sourceType": "github",
+      "sourceUrl": "https://github.com/firecrawl/skills.git",
+      "skillPath": "workflows/firecrawl-competitive-intel/SKILL.md",
+      "skillFolderHash": "621cf8bfc72aa294a8cab334652a7b4bab6f9797",
+      "installedAt": "2026-08-23T04:26:57.866Z",
+      "updatedAt": "2026-08-23T04:26:57.866Z"
+    },
+    "firecrawl-dashboard-reporting": {
+      "source": "firecrawl/skills",
+      "sourceType": "github",
+      "sourceUrl": "https://github.com/firecrawl/skills.git",
+      "skillPath": "workflows/firecrawl-dashboard-reporting/SKILL.md",
+      "skillFolderHash": "f9c206253379edfcdf8c97b33cbb69312e6c466f",
+      "installedAt": "2026-08-23T04:26:57.866Z",
+      "updatedAt": "2026-08-23T04:26:57.866Z"
+    },
+    "firecrawl-deep-research": {
+      "source": "firecrawl/skills",
+      "sourceType": "github",
+      "sourceUrl": "https://github.com/firecrawl/skills.git",
+      "skillPath": "workflows/firecrawl-deep-research/SKILL.md",
+      "skillFolderHash": "c36ab693dde6e4a7ad6d1fdf517425fa0312cadb",
+      "installedAt": "2026-08-23T04:26:57.866Z",
+      "updatedAt": "2026-08-23T04:26:57.866Z"
+    },
+    "firecrawl-demo-walkthrough": {
+      "source": "firecrawl/skills",
+      "sourceType": "github",
+      "sourceUrl": "https://github.com/firecrawl/skills.git",
+      "skillPath": "workflows/firecrawl-demo-walkthrough/SKILL.md",
+      "skillFolderHash": "590a69155c6e905c964d9b7d9f7fb55935331fb5",
+      "installedAt": "2026-08-23T04:26:57.866Z",
+      "updatedAt": "2026-08-23T04:26:57.866Z"
+    },
+    "firecrawl-knowledge-base": {
+      "source": "firecrawl/skills",
+      "sourceType": "github",
+      "sourceUrl": "https://github.com/firecrawl/skills.git",
+      "skillPath": "workflows/firecrawl-knowledge-base/SKILL.md",
+      "skillFolderHash": "1f01565aef29a2de4786291008e071137809f25c",
+      "installedAt": "2026-08-23T04:26:57.866Z",
+      "updatedAt": "2026-08-23T04:26:57.866Z"
+    },
+    "firecrawl-knowledge-ingest": {
+      "source": "firecrawl/skills",
+      "sourceType": "github",
+      "sourceUrl": "https://github.com/firecrawl/skills.git",
+      "skillPath": "workflows/firecrawl-knowledge-ingest/SKILL.md",
+      "skillFolderHash": "ad5c7bb10919121f371534a43ab3c35d2f4408e0",
+      "installedAt": "2026-08-23T04:26:57.866Z",
+      "updatedAt": "2026-08-23T04:26:57.866Z"
+    },
+    "firecrawl-lead-gen": {
+      "source": "firecrawl/skills",
+      "sourceType": "github",
+      "sourceUrl": "https://github.com/firecrawl/skills.git",
+      "skillPath": "workflows/firecrawl-lead-gen/SKILL.md",
+      "skillFolderHash": "3353f42ad183225b80077350813bb0e0aa82100e",
+      "installedAt": "2026-08-23T04:26:57.866Z",
+      "updatedAt": "2026-08-23T04:26:57.866Z"
+    },
+    "firecrawl-lead-research": {
+      "source": "firecrawl/skills",
+      "sourceType": "github",
+      "sourceUrl": "https://github.com/firecrawl/skills.git",
+      "skillPath": "workflows/firecrawl-lead-research/SKILL.md",
+      "skillFolderHash": "166a7ca070bf043e81874afa72665037a9feaa2a",
+      "installedAt": "2026-08-23T04:26:57.866Z",
+      "updatedAt": "2026-08-23T04:26:57.866Z"
+    },
+    "firecrawl-market-research": {
+      "source": "firecrawl/skills",
+      "sourceType": "github",
+      "sourceUrl": "https://github.com/firecrawl/skills.git",
+      "skillPath": "workflows/firecrawl-market-research/SKILL.md",
+      "skillFolderHash": "016ee912e6a3327b1b9e419dac4f339fee7d9a24",
+      "installedAt": "2026-08-23T04:26:57.866Z",
+      "updatedAt": "2026-08-23T04:26:57.866Z"
+    },
+    "firecrawl-qa": {
+      "source": "firecrawl/skills",
+      "sourceType": "github",
+      "sourceUrl": "https://github.com/firecrawl/skills.git",
+      "skillPath": "workflows/firecrawl-qa/SKILL.md",
+      "skillFolderHash": "e63645c4bf63689f995286d981f0aaaed002fc36",
+      "installedAt": "2026-08-23T04:26:57.866Z",
+      "updatedAt": "2026-08-23T04:26:57.866Z"
+    },
+    "firecrawl-research-papers": {
+      "source": "firecrawl/skills",
+      "sourceType": "github",
+      "sourceUrl": "https://github.com/firecrawl/skills.git",
+      "skillPath": "workflows/firecrawl-research-papers/SKILL.md",
+      "skillFolderHash": "e5eb417518493dd0f49763b36b6f34fafa7f84d9",
+      "installedAt": "2026-08-23T04:26:57.866Z",
+      "updatedAt": "2026-08-23T04:26:57.866Z"
+    },
+    "firecrawl-seo-audit": {
+      "source": "firecrawl/skills",
+      "sourceType": "github",
+      "sourceUrl": "https://github.com/firecrawl/skills.git",
+      "skillPath": "workflows/firecrawl-seo-audit/SKILL.md",
+      "skillFolderHash": "5337ce43a057826ef50661eb2c4752d7a1e06cc2",
+      "installedAt": "2026-08-23T04:26:57.866Z",
+      "updatedAt": "2026-08-23T04:26:57.866Z"
+    },
+    "firecrawl-shop": {
+      "source": "firecrawl/skills",
+      "sourceType": "github",
+      "sourceUrl": "https://github.com/firecrawl/skills.git",
+      "skillPath": "workflows/firecrawl-shop/SKILL.md",
+      "skillFolderHash": "84377c5a5ef7d99aba80654b12fdc724a7c8850f",
+      "installedAt": "2026-08-23T04:26:57.866Z",
+      "updatedAt": "2026-08-23T04:26:57.866Z"
+    },
+    "firecrawl-website-design-clone": {
+      "source": "firecrawl/skills",
+      "sourceType": "github",
+      "sourceUrl": "https://github.com/firecrawl/skills.git",
+      "skillPath": "workflows/firecrawl-website-design-clone/SKILL.md",
+      "skillFolderHash": "96b5aff11578c55d52562bde396e8b79dcb5f901",
+      "installedAt": "2026-08-23T04:26:57.866Z",
+      "updatedAt": "2026-08-23T04:26:57.866Z"
+    },
+    "firecrawl-workflows": {
+      "source": "firecrawl/skills",
+      "sourceType": "github",
+      "sourceUrl": "https://github.com/firecrawl/skills.git",
+      "skillPath": "workflows/firecrawl-workflows/SKILL.md",
+      "skillFolderHash": "5ed05c9e123076a4d146135a764d0b1d9b8430cc",
+      "installedAt": "2026-08-23T04:26:57.866Z",
+      "updatedAt": "2026-08-23T04:26:57.866Z"
+    },
+    "humanizer": {
+      "source": "blader/humanizer",
+      "sourceType": "github",
+      "sourceUrl": "https://github.com/blader/humanizer.git",
+      "skillPath": "SKILL.md",
+      "skillFolderHash": "225a6f39ac85f76ee48dbad772ea4abe4ed6c9d8",
+      "pluginName": "humanizer",
+      "installedAt": "2026-08-29T18:40:29.648Z",
+      "updatedAt": "2026-09-30T16:57:38.638Z"
+    },
+    "find-skills": {
+      "source": "vercel-labs/skills",
+      "sourceType": "github",
+      "sourceUrl": "https://github.com/vercel-labs/skills.git",
+      "skillPath": "skills/find-skills/SKILL.md",
+      "skillFolderHash": "76a98a285cb0434f3d39e1a873823556330e398b",
+      "installedAt": "2026-08-29T18:40:35.648Z",
+      "updatedAt": "2026-08-29T18:40:35.648Z"
+    }
+  },
+  "lastSelectedAgents": [
+    "amp",
+    "antigravity",
+    "antigravity-cli",
+    "cline",
+    "codex",
+    "cursor",
+    "deepagents",
+    "gemini-cli",
+    "github-copilot",
+    "kimi-code-cli",
+    "opencode",
+    "warp",
+    "zed",
+    "claude-code",
+    "cortex",
+    "grok"
+  ],
+  "dismissed": {
+    "findSkillsPrompt": true
+  }
+}

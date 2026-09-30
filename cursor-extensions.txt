@@ -1,0 +1,6 @@
+anysphere.cursorpyright
+anysphere.remote-ssh
+ms-python.debugpy
+ms-python.python
+repreng.csv
+tomoki1207.pdf
