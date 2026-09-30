@@ -2,6 +2,7 @@
 # Idempotent setup: Homebrew packages, stow packages into $HOME, machine-specific
 # values into untracked local files, iTerm2 prefs, Claude Code + Cursor tooling
 # (skills, MCP servers, extensions), and the secrets pre-commit hook.
+# Prerequisites (by hand): Homebrew, Cursor, Claude desktop app. See README "New machine".
 set -euo pipefail
 
 DOTFILES="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
@@ -13,13 +14,9 @@ if ! command -v brew >/dev/null 2>&1; then
   exit 1
 fi
 
-# Apps installed outside Homebrew block `brew bundle`; adopt them first (may prompt for sudo).
-for pair in cursor:Cursor claude:Claude; do
-  cask="${pair%%:*}"; app="${pair#*:}"
-  if [[ -d "/Applications/$app.app" ]] && ! brew list --cask "$cask" >/dev/null 2>&1; then
-    echo "Adopting existing /Applications/$app.app into Homebrew..."
-    brew install --cask --adopt "$cask"
-  fi
+# Cursor and the Claude desktop app self-update and are installed by hand (see README).
+for app in Cursor Claude; do
+  [[ -d "/Applications/$app.app" ]] || echo "Note: /Applications/$app.app not found. Install it from the vendor site; re-run to install its extensions/config."
 done
 
 echo "Installing Homebrew packages..."

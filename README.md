@@ -16,9 +16,18 @@ macOS terminal setup for Python-centric development. Each top-level folder is a
 | `agents`   | `~/.agents/.skill-lock.json`, `~/.agents/skills/` | Shared skill root for Claude Code and Cursor: lock file plus home-grown skills |
 | `cursor`   | `~/.cursor/mcp.json`, `~/.cursor/rules/`, Cursor `User/` | MCP servers, user rule (links to the global `CLAUDE.md`), editor settings, keybindings |
 | `iterm2/`  | (not stowed) iTerm2 custom prefs folder | Profile with Monaspice Nerd Font, colors, gestures. Loaded via `defaults`  |
-| `Brewfile` | Homebrew                             | Every dependency, including Cursor, the Claude desktop app, and `gitleaks`  |
+| `Brewfile` | Homebrew                             | Every CLI dependency and font, including `gitleaks` for the pre-commit hook |
 
-## Install
+## New machine
+
+Three things are installed by hand because they manage their own updates and macOS App
+Management blocks Homebrew from adopting an app it didn't install:
+
+1. Homebrew: https://brew.sh
+2. Cursor: https://cursor.com (also provides the `code` and `cursor` CLIs)
+3. Claude desktop app: https://claude.ai/download
+
+Then:
 
 ```bash
 git clone https://github.com/rkacker/dotfiles.git ~/code/dotfiles
@@ -26,16 +35,20 @@ cd ~/code/dotfiles
 ./install.sh
 ```
 
-`install.sh` is idempotent and location-independent. It adopts any Cursor or Claude app
-already in `/Applications` into Homebrew, runs `brew bundle`, restows each package, prompts
-once for your git identity, points iTerm2 at `iterm2/`, installs fzf keybindings, installs
-Claude Code with its self-updater on, restores skills, registers MCP servers, installs
-Cursor extensions, and enables the repo's pre-commit hook. Re-run it after pulling changes
-or adding a package. For a non-interactive run:
+`install.sh` is idempotent and location-independent. It runs `brew bundle`, restows each
+package, prompts once for your git identity, points iTerm2 at `iterm2/`, installs fzf
+keybindings, installs Claude Code with its self-updater on, restores skills, registers MCP
+servers, installs Cursor extensions, and enables the repo's pre-commit hook. Re-run it after
+pulling changes or adding a package. For a non-interactive run:
 
 ```bash
 GIT_USER_NAME="Your Name" GIT_USER_EMAIL="you@example.com" ./install.sh
 ```
+
+After it finishes: open a new iTerm2 window, restart Cursor so it picks up the symlinked
+settings, user rule, and `mcp.json`, and run `claude` once to sign in. Sign in to iTerm2's
+AI plugin and any OAuth MCP servers (Firecrawl) when first prompted; those tokens live in
+Keychain and tool state, never in this repo.
 
 ## Layout
 
